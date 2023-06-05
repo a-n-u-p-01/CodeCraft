@@ -162,11 +162,83 @@ footer{
 #a div div:nth-child(3){
     letter-spacing: 0.2ch;
     font-size: 30px;
+    display: flex;
 }
 
-#A3{
+
+#A2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    animation: reveal 10s forwards in;
+    width: 0%;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: reveal 4s forwards ease-in-out;
+
+}
+
+@keyframes reveal {
+    0%{
+        width:0%;
+    }
+    80%{
+        width:0%;
+    }
+    95%{
+        width:15%;
+    }
+   
+    100%{
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#A3-h{
+    width: 0ch;
+    letter-spacing: 0.2ch;
+    font-size: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typewriter 10s alternate steps(38) infinite;
+}
+
+
+@keyframes typewriter{
+    0%{
+       width: 0ch;
+    }
+    18%{
+         width: 0ch;
+    }
+   
+   
+    50%{
+         width: 40ch;
+    }
+ 
     
 }
+
+
+
 
 
 
