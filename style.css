@@ -68,12 +68,21 @@ color: white;
 }
 
 #contact{
-  color: white;
+color: white;
 position: fixed;
-right: 6rem;
+right: 40rem;
 font-size: 25px;
+animation: move-contact 1s forwards ease-out;
 }
-
+@keyframes move-contact{
+    0%{
+        right: 20rem;
+    }
+    
+    100%{
+        right: 6rem;
+    }
+}
 
 
 
