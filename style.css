@@ -1,0 +1,423 @@
+
+ *{
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    /* font-family: 'Ubuntu Mono', monospace; */
+    /* font-family: "Cutive Mono", monospace; */
+    font-family: 'VT323', monospace;
+      /* letter-spacing: 0.1ch; */
+   text-decoration: none;
+ }
+body{
+    width: 100%;
+    height: 100vh;
+    background: #116D6E;
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    padding-left: 5rem ;
+    padding-right: 5rem ;
+    /* background: rgb(29, 236, 94); */
+}
+#main-logo{
+    color: white;
+    font-size: 30px;
+    letter-spacing: 0.6ch;
+    position: fixed;
+    top: 2rem;
+    width: fit-content;
+    height: fit-content;
+    left: 5.5rem;
+}
+
+
+#main-logo span:nth-child(6){
+    width: 11rem;
+    font-size: 20px;
+    display: inline-block;
+    letter-spacing: 0.3ch; 
+    position: fixed;
+    
+}
+
+
+
+
+
+.details{
+opacity: 0.8;
+display: flex;
+justify-content: space-around;
+font-size: 25px;
+width: 30rem;
+font-family: 'VT323', monospace;
+position: fixed;
+left: 25rem;
+color: white;
+}
+.details a{
+    letter-spacing: 0.5ch;
+    color: white; 
+}
+
+#contact{
+  color: white;
+position: fixed;
+right: 6rem;
+font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+main{
+    /* opacity: 0; */
+    width: 100%;
+    height: 100vh;
+    /* background: yellow; */
+}
+
+header {
+    width: 100%;
+    height: 8rem;
+    background: #CD1818;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+footer{
+   outline: solid black;
+   opacity: 0.5;
+}
+
+
+
+#a{
+    font-size: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: -1;
+    /* background: red; */
+     width: 100%;  
+    height: 100vh;
+    color: white;
+    letter-spacing: 0.3ch;
+    
+}
+#A {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: move 3s ease-in-out forwards;
+}
+
+@keyframes move{
+0%{
+    top: 200px;
+}
+50%{
+    top: 150px;
+}
+100%{
+   top: 10px;
+}
+
+}
+
+
+
+
+#a div div:nth-child(1){
+    font-size: 30px;
+    letter-spacing: 0.2ch;
+}
+#a div div:nth-child(2){
+    font-size: 80px;
+}
+#a div div:nth-child(3){
+    letter-spacing: 0.2ch;
+    font-size: 30px;
+}
+
+
+
+
+
+#b{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: rgb(41, 207, 124); */
+    width: 100%;  
+    height: 100vh;
+    z-index: -1;
+    color: white;
+    font-size: 100px;
+}
+#c{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   /* background: rgb(41, 77, 207); */
+   width: 100%;  
+   height: 100vh;
+   z-index: -1;
+   color: white;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: rgb(207, 168, 41); */
+    width: 100%;  
+    height: 10vh;
+}
+
+.icon{
+    width: 2rem;
+    height: 10rem;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: fixed;
+    top: 25rem;
+    left: 1rem;
+}
+
+
+.icon span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    /* background: rgb(8, 237, 218); */
+}
+
+#stick {
+    height: 5rem ;
+    width: 2px ;
+    background: rgb(255, 255, 255) ;
+}
+
+.back{
+    /* background: rgb(199, 24, 24); */
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+     
+
+}
+.back div{
+    font-size: 40px;
+    color: aliceblue;
+    opacity: 0;
+    /* background: black; */
+    width: 15rem;
+    height: 2rem;
+}
+
+
+#D1{
+    position: fixed;
+    top: 390px;
+    left: 160px;
+    color: white;
+}
+#D2{
+    position: fixed;
+    left: 430px;
+    bottom: 270px;
+    color: white;
+}
+#D3{
+    position: fixed;
+    right: 340px;
+    top: 390px;
+    color: white;
+}
+#D4{
+    position: absolute;
+    bottom: 270px;
+    right: 60px;
+    color: white;
+}
+.back div.show {
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+.back div.notShow{
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+#background {
+    
+    /* opacity: 0;
+    font-size: 300px; */
+    width: 100%;
+    height: 100vh;
+    color: #000;
+    z-index: -999;
+    position: fixed;
+}
+
+
+#bg1{
+    
+    font-size: 200px; 
+    width: 100%;
+    height: 100vh;
+    color: rgb(255, 255, 255);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bg2{
+    width: 100%;
+    height: 100vh;
+    color: rgb(255, 255, 255);
+    position: fixed;
+}
+
+#bg2 span:nth-child(1){
+   
+    font-size: 300px;
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    top: 4rem;
+   left: 4rem;
+}
+
+#bg2 span:nth-child(2){
+
+    font-size: 300px;
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    bottom: -1rem;
+   right: -2rem;
+}
+
+#bg3{
+    
+    width: 100%;
+    height: 100vh;
+    font-size: 130px;
+    color: rgb(255, 255, 255);
+    position: fixed;
+    top: 12rem;
+    left: 6rem;
+}
+
+ 
+   
+
+
+
+.Show {
+    opacity: 0.09;
+    transition: opacity 0.5s ease-in-out;
+}
+.notShow {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+#left{
+    width: 5rem;
+    height: 100vh;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0c9ea1;
+    
+
+}
+#right{
+    width: 5rem;
+    height: 100vh;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #0c9ea1;
+    
+
+}
+
+#leftUp{
+    opacity: 0.5;
+    width: 5rem;
+    height: 20vh;
+    font-size: 100px;
+    z-index: 7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    background-color: transparent;
+}
+
+#rightUp{
+    opacity: 0.5;
+    font-size: 100px;
+    width: 5rem;
+    height: 20vh;
+    z-index: 7;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    color: white;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
