@@ -42,11 +42,22 @@ if(scrollPosition >= 300)
 {
   document.getElementById("bg1").classList.remove('Show');
   document.getElementById("bg1").classList.add('notShow');
+  
+  document.getElementById('A').classList.remove('move-animation')
+  document.getElementById('A2').classList.remove('text-reveal-A2')
+  document.getElementById('A3-h').classList.remove('typewriter-A3')
 }
 else{
+
   document.getElementById("bg1").classList.add('Show');
   document.getElementById("bg1").classList.remove('notShow');
+  document.getElementById('A').classList.add('move-animation')
+  document.getElementById('A2').classList.add('text-reveal-A2')
+   
 }
+
+
+
 if(306<= scrollPosition && scrollPosition <= 800)
 {
   var background = document.querySelectorAll('#bg2 span');
@@ -54,6 +65,7 @@ if(306<= scrollPosition && scrollPosition <= 800)
   background.classList.remove('notShow');
   background.classList.add('Show');
     });
+
 }
 else{
   var background = document.querySelectorAll('#bg2 span');
@@ -66,6 +78,7 @@ else{
 
 if(scrollPosition >= 800)
 {
+
   document.getElementById("bg3").classList.add('Show');
   document.getElementById("bg3").classList.remove('notShow');
 }
@@ -73,24 +86,6 @@ else{
   document.getElementById("bg3").classList.remove('Show');
   document.getElementById("bg3").classList.add('notShow');
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -115,7 +110,7 @@ else{
     document.getElementById('D3').classList.add('d3');
     document.getElementById('D4').classList.add('d4');
     const parentElement = document.getElementById('div-back');
-    const elements = parentElement.querySelectorAll('div');a
+    const elements = parentElement.querySelectorAll('div');
 
       elements.forEach(element => {
       element.classList.remove('show');
@@ -123,7 +118,105 @@ else{
     });
       
 }
+
+
+
+if(scrollPosition >= 2150){
+  document.querySelector('.foot').classList.add('f-Show');
+  document.querySelector('.foot').classList.remove('f-notShow');
+  document.getElementById('E1').classList.add('E1-move');
+  document.getElementById('E2').classList.add('E2-move');
+  document.getElementById('E3').classList.add('E3-move');
+  document.getElementById('EB-1').classList.add('EB1-move');
+  document.getElementById('EB-2').classList.add('EB2-move');
+  
+}
+else
+{
+  document.querySelector('.foot').classList.add('f-notShow');
+  document.querySelector('.foot').classList.remove('f-Show');
+
+  document.getElementById('E1').classList.remove('E1-move');
+  document.getElementById('E2').classList.remove('E2-move');
+  document.getElementById('E3').classList.remove('E3-move');
+  document.getElementById('EB-1').classList.remove('EB1-move');
+  document.getElementById('EB-2').classList.remove('EB2-move');
+  document.getElementById('typed-text').classList.remove('type1');
+  document.getElementById('typed-text1').classList.remove('type1');
+  document.getElementById('typed-text2').classList.remove('type1');
+  document.getElementById('typed-text3').classList.remove('typed1');
+}
+
 });
+
+
+// document.addEventListener("animationend", (event) => {
+  
+//   if (event.target.classList.contains('type1')) {
+//     console.log("Animation complete!");
+//     event.target.classList.remove('type1');
+//     let element;
+//     for (let i = 0; i < 4; i++) {
+//       let elementId;
+//       switch (i) {
+//         case 0:
+//           elementId = 'typed-text1';
+//           break;
+//         case 1:
+//           elementId = 'typed-text2';
+//           break;
+//         case 2:
+//           elementId = 'typed-text3';
+//           break;
+//         case 3:
+//           elementId = 'typed-text';
+//           break;
+//         default:
+//           continue;
+//       }
+
+//     element = document.getElementById(elementId);
+     
+//       break;
+//     }
+//     setTimeout(() => {
+        
+//       element.classList.add('type1');
+      
+//     }, 100);
+    
+//   }
+  
+// })
+
+
+document.addEventListener("animationend", (event) => {
+  if (event.target.classList.contains('E2-move')){
+    document.getElementById('typed-text').classList.add('type1');
+  }
+
+  if (event.target.classList.contains('text-reveal-A2')){
+    document.getElementById('A3-h').classList.add('typewriter-A3');
+  }
+
+
+
+  if (event.target.classList.contains('type1')){ 
+  const elementIds = ['typed-text', 'typed-text2', 'typed-text3', 'typed-text1'];
+  const currentIndex = elementIds.findIndex(id => event.target.id === id);
+  const nextIndex = (currentIndex + 1) % elementIds.length;
+
+  event.target.classList.remove('type1');
+  document.getElementById(elementIds[nextIndex]).classList.add('type1');
+  
+
+}
+});
+
+
+
+
+
 
 
 
