@@ -2,7 +2,11 @@
 // --------------------------------------NavigationPreloadManager----------------------
 var hash = window.location.hash;
 console.log(hash);
-
+window.onhashchange = function() {
+  hash = window.location.hash;
+  
+  // Code to handle hash change
+ 
 if(hash === '#home')
 {      
       window.location.hash = 'home';
@@ -64,6 +68,9 @@ else if (hash === '#blog')
   element.classList.add('notShow');
 });
 }
+console.log('Hash changed:', location.hash);
+};
+
 
 
 
