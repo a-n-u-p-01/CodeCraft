@@ -1,7 +1,6 @@
 
-// --------------------------------------NavigationPreloadManager----------------------
 
-
+// ----------------------------------- load hash check-----------------------------
 var hash = window.location.hash;
 window.addEventListener('load', function() {
   hash = window.location.hash;
@@ -66,10 +65,8 @@ window.addEventListener('load', function() {
     element.classList.add('notShow');
   });
   }
-  
-
 })
-
+// ------------------------back and forward------------------------------
 console.log(hash);
 window.onhashchange = function() {
   hash = window.location.hash;

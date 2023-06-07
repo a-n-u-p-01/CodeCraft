@@ -563,8 +563,17 @@ footer{
     bottom: 0;
     z-index: 2;
     transition: opacity 0.5;
-    
 }
+
+footer a{
+    font-size: 1px;
+    color: #000;
+}
+
+
+
+
+
 .f-Show {
     opacity: 1;
     transition: opacity 1s ease-in-out;
