@@ -94,15 +94,6 @@ animation: move-contact 4.5s forwards ease-out;
 }
 
 
-
-
-
-
-
-
-
-
-
 main{
     
     /* opacity: 0; */
@@ -110,6 +101,13 @@ main{
     height: 100vh;
     /* background: yellow; */
 }
+
+
+
+
+
+
+
 
 header {
     z-index: 5;
@@ -122,6 +120,13 @@ header {
     position: fixed;
 }
 
+
+/* ---------------------------------------------------home page---------------------------------------- */
+#home {
+  display: none;
+  width: 100%;
+  height: 100vh;
+}
 
 
 
@@ -541,20 +546,6 @@ header {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 footer{
     display: flex;
     justify-content: center;
@@ -576,6 +567,198 @@ footer{
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
+
+
+
+
+
+.back{
+    /* background: rgb(199, 24, 24); */
+    position: fixed;
+    z-index: 1;
+   
+}
+.back div{
+    font-size: 40px;
+    color: aliceblue;
+    opacity: 0;
+    /* background: black; */
+    width: 15rem;
+    height: 2rem;
+}
+
+
+#D1{
+    position: fixed;
+    top: 390px;
+    left: 160px;
+    color: white;
+}
+#D2{
+    position: fixed;
+    left: 430px;
+    bottom: 270px;
+    color: white;
+}
+#D3{
+    position: fixed;
+    right: 340px;
+    top: 390px;
+    color: white;
+}
+#D4{
+    position: fixed;
+    bottom: 100px;
+    right: 60px;
+    color: white;
+}
+.back div.show {
+   
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+.back div.notShow{
+    
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+#background {
+    
+    /* opacity: 0;
+    font-size: 300px; */
+    width: 100%;
+    height: 100vh;
+    color: #000;
+    z-index: -999;
+    position: fixed;
+}
+
+
+#bg1{
+    
+    font-size: 200px; 
+    width: 100%;
+    height: 100vh;
+    color: rgb(255, 255, 255);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bg2{
+    width: 100%;
+    height: 100vh;
+    color: rgb(255, 255, 255);
+    position: fixed;
+}
+
+#bg2 span:nth-child(1){
+   
+    font-size: 300px;
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    top: 4rem;
+   left: 4rem;
+}
+
+#bg2 span:nth-child(2){
+
+    font-size: 300px;
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    bottom: -1rem;
+   right: -2rem;
+}
+
+#bg3{
+    
+    width: 100%;
+    height: 100vh;
+    font-size: 130px;
+    color: rgb(255, 255, 255);
+    position: fixed;
+    top: 12rem;
+    left: 6rem;
+}
+
+ 
+
+.Show {
+    opacity: 0.09;
+    display: block;
+    transition: opacity 0.5s ease-in-out;
+}
+.notShow {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+}
+
+
+
+/* ----------------------------- work PAGE---------------- -----------------------------------------*/
+
+#work {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    position: absolute;
+}
+
+#projects{
+ width: 100%;
+ height: 1000rem;
+ background-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* -------------------------------------------about------------------------------------------- */
+#about{
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255, 0, 0);
+}
+/* -------------------------------------------------------blog page------------------------------------------ */
+
+#blog{
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgb(3, 255, 41);
+}
+
+
+
+
 
 
 
@@ -648,8 +831,6 @@ footer{
 }
 
 
-
-
 @keyframes r-stick {
     0%{
         height: 0rem;
@@ -704,135 +885,6 @@ footer{
 
 
 
-.back{
-    /* background: rgb(199, 24, 24); */
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-     z-index: -1;
-
-}
-.back div{
-    font-size: 40px;
-    color: aliceblue;
-    opacity: 0;
-    /* background: black; */
-    width: 15rem;
-    height: 2rem;
-}
-
-
-#D1{
-    position: fixed;
-    top: 390px;
-    left: 160px;
-    color: white;
-}
-#D2{
-    position: fixed;
-    left: 430px;
-    bottom: 270px;
-    color: white;
-}
-#D3{
-    position: fixed;
-    right: 340px;
-    top: 390px;
-    color: white;
-}
-#D4{
-    position: absolute;
-    bottom: 270px;
-    right: 60px;
-    color: white;
-}
-.back div.show {
-    opacity: 0.5;
-    transition: opacity 0.5s ease-in-out;
-  }
-
-.back div.notShow{
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-
-#background {
-    
-    /* opacity: 0;
-    font-size: 300px; */
-    width: 100%;
-    height: 100vh;
-    color: #000;
-    z-index: -999;
-    position: fixed;
-}
-
-
-#bg1{
-    
-    font-size: 200px; 
-    width: 100%;
-    height: 100vh;
-    color: rgb(255, 255, 255);
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#bg2{
-    width: 100%;
-    height: 100vh;
-    color: rgb(255, 255, 255);
-    position: fixed;
-}
-
-#bg2 span:nth-child(1){
-   
-    font-size: 300px;
-    width: fit-content;
-    height: fit-content;
-    position: fixed;
-    top: 4rem;
-   left: 4rem;
-}
-
-#bg2 span:nth-child(2){
-
-    font-size: 300px;
-    width: fit-content;
-    height: fit-content;
-    position: fixed;
-    bottom: -1rem;
-   right: -2rem;
-}
-
-#bg3{
-    
-    width: 100%;
-    height: 100vh;
-    font-size: 130px;
-    color: rgb(255, 255, 255);
-    position: fixed;
-    top: 12rem;
-    left: 6rem;
-}
-
- 
-   
-
-
-
-.Show {
-    opacity: 0.09;
-    transition: opacity 0.5s ease-in-out;
-}
-.notShow {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
 
 #left{
     width: 5rem;
@@ -886,19 +938,3 @@ footer{
     background-color: transparent;
     color: white;
 } 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

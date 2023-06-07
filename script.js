@@ -1,3 +1,122 @@
+
+// --------------------------------------NavigationPreloadManager----------------------
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Check if there's a selected element in the local storage
+  var selectedElement = localStorage.getItem("selectedElement");
+  if (selectedElement) {
+    showElement(selectedElement);
+  } else {
+    showElement("home"); // Default to home element
+  }
+//  if(selectedElement.id=="home") {
+//   const elements = document.querySelectorAll('.back')
+//       elements.forEach(element => {
+//       element.classList.remove('notShow');
+//       element.classList.add('show');
+//     });
+//  }
+// else{
+//   const elements = document.querySelectorAll('.back')
+//       elements.forEach(element => {
+//       element.classList.remove('show');
+//       element.classList.add('notShow');
+//     });
+// }
+
+
+  // Add click event listeners to the navigation links
+  var navLinks = document.getElementsByClassName("details")[0].getElementsByTagName("a");
+  for (var i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent the default link behavior
+      var targetElement = this.getAttribute("href").substring(1); // Get the target element id
+      showElement(targetElement); // Show the target element
+    });
+  }
+
+  function showElement(elementId) {
+    var elements = document.getElementsByClassName("element");
+    for (var i = 0; i < elements.length; i++) {
+      elements[i].style.display = "none"; // Hide all elements
+    }
+
+    var selectedElement = document.getElementById(elementId);
+    selectedElement.style.display = "block"; // Show selected element
+
+    localStorage.setItem("selectedElement", elementId); // Store selected element in local storage
+  }
+});
+// -------------------------------------------------------------------------
+
+
+
+// ---------------------- toggle  --------------------------
+
+
+let navElems = document.getElementsByClassName('details');
+Array.from(navElems).forEach(navElem => {
+  navElem.addEventListener('click', (e) => {
+    if(e.target.classList.contains('home-nav'))
+    {
+      document.getElementById('home').style.display = 'block';
+      document.getElementById('work').style.display = 'none';
+      document.getElementById('about').style.display = 'none';
+      document.getElementById('blog').style.display = 'none';
+      const elements = document.querySelectorAll('.back')
+      elements.forEach(element => {
+      element.classList.remove('notShow');
+      element.classList.add('show');
+    });
+    }
+  else if(e.target.classList.contains('work-nav'))
+    {
+      document.getElementById('home').style.display = 'none';
+      document.getElementById('work').style.display = 'block';
+      document.getElementById('about').style.display = 'none';
+      document.getElementById('blog').style.display = 'none';
+      const elements = document.querySelectorAll('.back')
+      elements.forEach(element => {
+      element.classList.remove('show');
+      element.classList.add('notShow');
+    });
+    }
+   else if(e.target.classList.contains('about-nav'))
+    {
+      document.getElementById('home').style.display = 'none';
+      document.getElementById('work').style.display = 'none';
+      document.getElementById('about').style.display = 'block';
+      document.getElementById('blog').style.display = 'none';
+      const elements = document.querySelectorAll('.back')
+      elements.forEach(element => {
+      element.classList.remove('show');
+      element.classList.add('notShow');
+    });
+    }
+   else if(e.target.classList.contains('blog-nav'))
+    {
+      document.getElementById('home').style.display = 'none';
+      document.getElementById('work').style.display = 'none';
+      document.getElementById('about').style.display = 'none';
+      document.getElementById('blog').style.display = 'block';
+      const elements = document.querySelectorAll('.back')
+      elements.forEach(element => {
+      element.classList.remove('show');
+      element.classList.add('notShow');
+    });
+    }
+
+  });
+});
+
+// -----------------------------NavEnd---------------------------------------
+
+
+
+
+// --------------------------HomePage--------------------------------
 const child1 = document.getElementById('D1');
 const child2 = document.getElementById('D2');
 const child3 = document.getElementById('D3');
@@ -15,7 +134,6 @@ const divTopOffset4 = divRect4.bottom;
 window.addEventListener('load', function() {
   document.getElementById("bg1").classList.add('Show');
   document.getElementById("bg1").classList.remove('notShow');
-
 });
 window.addEventListener('load', function() {
   
@@ -31,12 +149,6 @@ window.addEventListener('load', function() {
 window.addEventListener('scroll', () => {
   const scrollPosition = window.scrollY;
   console.log(scrollPosition)
-let x =0.5;
-child1.style.top = `${divTopOffset1 - (scrollPosition-240)*0.4}px`;
-child2.style.bottom = `${divTopOffset2 - (scrollPosition-240)*0.4}px`;
-child3.style.top = `${divTopOffset1 - (scrollPosition-240)*0.6}px`;
-child4.style.bottom = `${divTopOffset1 - (scrollPosition-240)*0.6}px`;
-
 
 if(scrollPosition >= 300)
 {
@@ -89,39 +201,33 @@ else{
 
 }
 
-
+// -------------------------------------paralax effect---------------------------------------------------
 
   if(306<= scrollPosition && scrollPosition <= 750){
-      const parentElement = document.getElementById('div-back');
-      const elements = parentElement.querySelectorAll('div');
+     
+      const elements = document.querySelectorAll('.back div')
       elements.forEach(element => {
       element.classList.remove('notShow');
       element.classList.add('show');
-      //  var background1 = document.getElementById('#background span');
-      //   // background.innerHTML = '&lt;/ &gt;/&lt;';
-      //   background1.classList.remove('notShow');
-      //   background1.classList.add('Show');  
-     
-});
+    });
+child1.style.top = `${divTopOffset1 - ((scrollPosition-306)*0.4)}px`;
+child2.style.bottom = `${divTopOffset2 - ((scrollPosition-306)*0.4)}px`;
+child3.style.top = `${divTopOffset1 - ((scrollPosition-306)*0.6)}px`;
+child4.style.bottom = `${divTopOffset1 - ((scrollPosition-306)*0.6)}px`;
 
+    
   }
 
   else
   {
-    document.getElementById('D1').classList.add('d1');
-    document.getElementById('D2').classList.add('d2');
-    document.getElementById('D3').classList.add('d3');
-    document.getElementById('D4').classList.add('d4');
-    const parentElement = document.getElementById('div-back');
-    const elements = parentElement.querySelectorAll('div');
-
-      elements.forEach(element => {
-      element.classList.remove('show');
-      element.classList.add('notShow');
-    });
+    const elements = document.querySelectorAll('.back div')
+    elements.forEach(element => {
+    element.classList.remove('show');
+    element.classList.add('notShow');
+  });
       
 }
-
+// ---------------------------------------------------------------------
 
 
 if(scrollPosition >= 2200){
