@@ -2,53 +2,55 @@
 // --------------------------------------NavigationPreloadManager----------------------
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  const details = document.querySelector('.details');
+  const contents = document.querySelectorAll('.content');
 
-document.addEventListener("DOMContentLoaded", function() {
-  // Check if there's a selected element in the local storage
-  var selectedElement = localStorage.getItem("selectedElement");
-  if (selectedElement) {
-    showElement(selectedElement);
-  } else {
-    showElement("home"); // Default to home element
-  }
-//  if(selectedElement.id=="home") {
-//   const elements = document.querySelectorAll('.back')
-//       elements.forEach(element => {
-//       element.classList.remove('notShow');
-//       element.classList.add('show');
-//     });
-//  }
-// else{
-//   const elements = document.querySelectorAll('.back')
-//       elements.forEach(element => {
-//       element.classList.remove('show');
-//       element.classList.add('notShow');
-//     });
-// }
+  // Retrieve the last clicked element from localStorage
+  const lastClickedElement = localStorage.getItem('lastClickedElement');
 
-
-  // Add click event listeners to the navigation links
-  var navLinks = document.getElementsByClassName("details")[0].getElementsByTagName("a");
-  for (var i = 0; i < navLinks.length; i++) {
-    navLinks[i].addEventListener("click", function(event) {
-      event.preventDefault(); // Prevent the default link behavior
-      var targetElement = this.getAttribute("href").substring(1); // Get the target element id
-      showElement(targetElement); // Show the target element
+  // Function to show the clicked element and hide others
+  function showElement(elementId) {
+    contents.forEach(content => {
+      if (content.id === elementId) {
+        content.style.display = 'block';
+      } else {
+        content.style.display = 'none';
+      }
     });
   }
 
-  function showElement(elementId) {
-    var elements = document.getElementsByClassName("element");
-    for (var i = 0; i < elements.length; i++) {
-      elements[i].style.display = "none"; // Hide all elements
+  // Event listener for each nav element
+  details.addEventListener('click', function(event) {
+    event.preventDefault();
+    const target = event.target;
+    if (target.classList.contains('home-nav')) {
+      // Show the home content and remove the lastClickedElement from localStorage
+      showElement('home');
+      localStorage.removeItem('lastClickedElement');
+    } else if (target.classList.contains('work-nav')) {
+      // Show the work content and store the lastClickedElement in localStorage
+      showElement('work');
+      localStorage.setItem('lastClickedElement', 'work');
+    } else if (target.classList.contains('about-nav')) {
+      // Show the about content and store the lastClickedElement in localStorage
+      showElement('about');
+      localStorage.setItem('lastClickedElement', 'about');
+    } else if (target.classList.contains('blog-nav')) {
+      // Show the blog content and store the lastClickedElement in localStorage
+      showElement('blog');
+      localStorage.setItem('lastClickedElement', 'blog');
     }
+  });
 
-    var selectedElement = document.getElementById(elementId);
-    selectedElement.style.display = "block"; // Show selected element
-
-    localStorage.setItem("selectedElement", elementId); // Store selected element in local storage
+  // Show the last clicked element if it exists in localStorage, or show the home content by default
+  if (lastClickedElement) {
+    showElement(lastClickedElement);
+  } else {
+    showElement('home');
   }
 });
+
 // -------------------------------------------------------------------------
 
 
@@ -112,8 +114,6 @@ Array.from(navElems).forEach(navElem => {
 });
 
 // -----------------------------NavEnd---------------------------------------
-
-
 
 
 // --------------------------HomePage--------------------------------
@@ -325,7 +325,7 @@ document.addEventListener("animationend", (event) => {
 });
 
 
-
+// ------------------------------------Work-------------------------------------------
 
 
 

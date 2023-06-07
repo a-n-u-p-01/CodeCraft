@@ -120,10 +120,15 @@ header {
     position: fixed;
 }
 
+.content{
+    display: none;
+}
+
+
+
 
 /* ---------------------------------------------------home page---------------------------------------- */
 #home {
-  display: none;
   width: 100%;
   height: 100vh;
 }
@@ -705,19 +710,37 @@ footer{
 /* ----------------------------- work PAGE---------------- -----------------------------------------*/
 
 #work {
-    width: 100%;
-    height: 100vh;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    position: absolute;
+   background: transparent;
+   
+   width: 100%;
+   height: fit-content;
+   /* display: flex; */
+   flex-direction: column;
+   align-items: center;
 }
 
+#work h1{
+    font-size: 50px;
+    background: transparent ;
+    color: #CD1818;
+    z-index: 1;
+    top: 50vh;
+    width: 100%;
+    top: 40vh;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
 #projects{
- width: 100%;
- height: 1000rem;
- background-color: transparent;
+ position: relative;
+ top: 50vh;
+ 
+ opacity: 0.5;
+ height: 1100rem;
 }
 
 
@@ -740,7 +763,7 @@ footer{
 #about{
     width: 100%;
     height: 100vh;
-    display: none;
+    
     align-items: center;
     justify-content: center;
     background: rgb(255, 0, 0);
@@ -750,7 +773,7 @@ footer{
 #blog{
     width: 100%;
     height: 100vh;
-    display: none;
+    
     align-items: center;
     justify-content: center;
     background: rgb(3, 255, 41);
@@ -887,6 +910,7 @@ footer{
 
 
 #left{
+   
     width: 5rem;
     height: 100vh;
     z-index: -1;
