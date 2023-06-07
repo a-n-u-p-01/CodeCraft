@@ -831,20 +831,20 @@ footer a{
 }
 
 #myLogo{
-  background-image: url(/icons/myLogo1.png);
+  background-image: url(myLogo1.png);
   background-size: cover;
   transform: rotate(-90deg);
   
 }
 #git-logo{
 
-    background-image: url(/icons/github-mark.png);
+    background-image: url(github-mark.png);
     background-size: cover;
     transform: rotate(-90deg);
 
 }
 #linked-in{
-    background-image: url(/icons/linkedin.png);
+    background-image: url(linkedin.png);
     background-size: cover;
     transform: rotate(-90deg);
 }
