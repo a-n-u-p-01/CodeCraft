@@ -53,6 +53,7 @@ else{
   document.getElementById("bg1").classList.remove('notShow');
   document.getElementById('A').classList.add('move-animation')
   document.getElementById('A2').classList.add('text-reveal-A2')
+
    
 }
 
@@ -85,6 +86,7 @@ if(scrollPosition >= 800)
 else{
   document.getElementById("bg3").classList.remove('Show');
   document.getElementById("bg3").classList.add('notShow');
+
 }
 
 
@@ -99,6 +101,7 @@ else{
       //   // background.innerHTML = '&lt;/ &gt;/&lt;';
       //   background1.classList.remove('notShow');
       //   background1.classList.add('Show');  
+     
 });
 
   }
@@ -121,17 +124,17 @@ else{
 
 
 
-if(scrollPosition >= 2150){
+if(scrollPosition >= 2200){
   document.querySelector('.foot').classList.add('f-Show');
   document.querySelector('.foot').classList.remove('f-notShow');
   document.getElementById('E1').classList.add('E1-move');
   document.getElementById('E2').classList.add('E2-move');
   document.getElementById('E3').classList.add('E3-move');
-  document.getElementById('EB-1').classList.add('EB1-move');
-  document.getElementById('EB-2').classList.add('EB2-move');
+  document.getElementById('EB1').classList.add('EB1-move');
+  document.getElementById('EB2').classList.add('EB2-move');
   
 }
-else
+else if(scrollPosition <= 2200)
 {
   document.querySelector('.foot').classList.add('f-notShow');
   document.querySelector('.foot').classList.remove('f-Show');
@@ -139,12 +142,12 @@ else
   document.getElementById('E1').classList.remove('E1-move');
   document.getElementById('E2').classList.remove('E2-move');
   document.getElementById('E3').classList.remove('E3-move');
-  document.getElementById('EB-1').classList.remove('EB1-move');
-  document.getElementById('EB-2').classList.remove('EB2-move');
+  document.getElementById('EB1').classList.remove('EB1-move');
+  document.getElementById('EB2').classList.remove('EB2-move');
   document.getElementById('typed-text').classList.remove('type1');
   document.getElementById('typed-text1').classList.remove('type1');
   document.getElementById('typed-text2').classList.remove('type1');
-  document.getElementById('typed-text3').classList.remove('typed1');
+  document.getElementById('typed-text3').classList.remove('type1');
 }
 
 });
@@ -193,24 +196,26 @@ else
 document.addEventListener("animationend", (event) => {
   if (event.target.classList.contains('E2-move')){
     document.getElementById('typed-text').classList.add('type1');
+    
   }
 
   if (event.target.classList.contains('text-reveal-A2')){
+    
     document.getElementById('A3-h').classList.add('typewriter-A3');
   }
 
 
 
-  if (event.target.classList.contains('type1')){ 
-  const elementIds = ['typed-text', 'typed-text2', 'typed-text3', 'typed-text1'];
+  if (event.target.classList.contains('type1')){
+    event.target.classList.remove('type1'); 
+  const elementIds = ['typed-text', 'typed-text1', 'typed-text2', 'typed-text3'];
   const currentIndex = elementIds.findIndex(id => event.target.id === id);
   const nextIndex = (currentIndex + 1) % elementIds.length;
 
   event.target.classList.remove('type1');
-  document.getElementById(elementIds[nextIndex]).classList.add('type1');
+  document.getElementById(elementIds[nextIndex]).classList.add('type1');}
   
 
-}
 });
 
 
