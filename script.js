@@ -259,7 +259,8 @@ window.addEventListener('load', function() {
 window.addEventListener('scroll', () => {
   const scrollPosition = window.scrollY;
   console.log(scrollPosition)
-  if(hash === '#home')
+  
+  if(hash === '#home' || hash === '')
   {  
   
  
