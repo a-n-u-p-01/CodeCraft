@@ -133,7 +133,7 @@ Array.from(navElems).forEach(navElem => {
 
     element.style.opacity = 0.5;
   });
-});
+}); 
 
 // -----------------------------NavEnd---------------------------------------
 
