@@ -77,6 +77,7 @@ else if (hash === '#blog')
 let navElems = document.getElementsByClassName('details');
 Array.from(navElems).forEach(navElem => {
   navElem.addEventListener('click', (e) => {
+    
     if(e.target.classList.contains('home-nav'))
     {
       
@@ -100,6 +101,10 @@ document.getElementById('D4').style.bottom = '100px';
     }
   else if(e.target.classList.contains('work-nav'))
     {
+
+     
+      
+
       window.location.hash = 'work';
       document.getElementById('home').style.display = 'none';
       document.getElementById('work').style.display = 'block';
@@ -137,8 +142,12 @@ document.getElementById('D4').style.bottom = '100px';
       element.classList.add('notShow');
     });
     }
-
-    element.style.opacity = 0.5;
+    setTimeout(() =>{
+      hash = window.location.hash;
+      console.log(hash);
+    }, 100)
+    
+    
   });
 }); 
 
@@ -178,6 +187,10 @@ window.addEventListener('load', function() {
 window.addEventListener('scroll', () => {
   const scrollPosition = window.scrollY;
   console.log(scrollPosition)
+  if(hash === '#home')
+  {  
+  
+ 
 
 if(scrollPosition >= 300)
 {
@@ -239,10 +252,11 @@ else{
       element.classList.remove('notShow');
       element.classList.add('show');
     });
-child1.style.top = `${divTopOffset1+400 - ((scrollPosition-240)*0.4)}px`;
-child2.style.bottom = `${divTopOffset2+400 - ((scrollPosition-240)*0.4)}px`;
-child3.style.top = `${divTopOffset1+400 - ((scrollPosition-240)*0.6)}px`;
-child4.style.bottom = `${divTopOffset1+500 - ((scrollPosition-240)*0.6)}px`;
+child1.style.top = `${divTopOffset1 - ((scrollPosition-240)*0.4)}px`;
+child2.style.bottom = `${divTopOffset2 - ((scrollPosition-240)*0.4)}px`;
+child3.style.top = `${divTopOffset3 - ((scrollPosition-240)*0.6)}px`;
+child4.style.bottom = `${divTopOffset4 - ((scrollPosition-240)*0.6)}px`;
+
 
     
   }
@@ -284,6 +298,7 @@ else if(scrollPosition <= 2200)
   document.getElementById('typed-text2').classList.remove('type1');
   document.getElementById('typed-text3').classList.remove('type1');
 }
+  }  
 
 });
 
@@ -349,7 +364,7 @@ document.addEventListener("animationend", (event) => {
 
   event.target.classList.remove('type1');
   document.getElementById(elementIds[nextIndex]).classList.add('type1');}
-  
+
 
 });
 
