@@ -618,6 +618,13 @@ footer{
     right: 60px;
     color: white;
 }
+
+
+.Show-2 {
+    opacity: 0.3;
+    display: block;
+    transition: opacity 0.5s ease-in-out;
+}
 .back div.show {
    
     opacity: 0.5;
@@ -695,11 +702,7 @@ footer{
 
  
 
-.Show-2 {
-    opacity: 0.3;
-    display: block;
-    transition: opacity 0.5s ease-in-out;
-}
+
 .Show {
     opacity: 0.09;
     display: block;

@@ -4,8 +4,9 @@ var hash = window.location.hash;
 console.log(hash);
 
 if(hash === '#home')
-{
-  document.getElementById('home').style.display = 'block';
+{      
+      window.location.hash = 'home';
+      document.getElementById('home').style.display = 'block';
       document.getElementById('work').style.display = 'none';
       document.getElementById('about').style.display = 'none';
       document.getElementById('blog').style.display = 'none';
@@ -13,14 +14,13 @@ if(hash === '#home')
       elements.forEach(element => {
       element.classList.remove('notShow');
       element.classList.add('Show-2');
-      element.style.opacity = 0.5;
+      
     });
     }
 else if (hash === '#work')
 {
   console.log(hash);
   document.getElementById('work').style.display = 'block';
-  window.location.hash = 'work';
   window.location.hash = 'work';
   document.getElementById('home').style.display = 'none';
   document.getElementById('work').style.display = 'block';
@@ -37,7 +37,7 @@ else if (hash === '#about')
   console.log(hash);
   document.getElementById('about').style.display = 'block';
   window.location.hash = 'about';
-  window.location.hash = 'about';
+  
   document.getElementById('home').style.display = 'none';
   document.getElementById('work').style.display = 'none';
   document.getElementById('about').style.display = 'block';
@@ -62,7 +62,6 @@ else if (hash === '#blog')
   element.classList.remove('Show-2');
   
   element.classList.add('notShow');
-  element.style.opacity = 0.5;
 });
 }
 
@@ -81,6 +80,14 @@ Array.from(navElems).forEach(navElem => {
     if(e.target.classList.contains('home-nav'))
     {
       
+document.getElementById('D1').style.top = '390px';
+document.getElementById('D2').style.bottom = '270px';
+document.getElementById('D3').style.top = '390px';
+document.getElementById('D4').style.bottom = '100px';
+
+
+
+
       document.getElementById('home').style.display = 'block';
       document.getElementById('work').style.display = 'none';
       document.getElementById('about').style.display = 'none';
@@ -232,10 +239,10 @@ else{
       element.classList.remove('notShow');
       element.classList.add('show');
     });
-child1.style.top = `${divTopOffset1 - ((scrollPosition-306)*0.4)}px`;
-child2.style.bottom = `${divTopOffset2 - ((scrollPosition-306)*0.4)}px`;
-child3.style.top = `${divTopOffset1 - ((scrollPosition-306)*0.6)}px`;
-child4.style.bottom = `${divTopOffset1 - ((scrollPosition-306)*0.6)}px`;
+child1.style.top = `${divTopOffset1+400 - ((scrollPosition-240)*0.4)}px`;
+child2.style.bottom = `${divTopOffset2+400 - ((scrollPosition-240)*0.4)}px`;
+child3.style.top = `${divTopOffset1+400 - ((scrollPosition-240)*0.6)}px`;
+child4.style.bottom = `${divTopOffset1+500 - ((scrollPosition-240)*0.6)}px`;
 
     
   }
