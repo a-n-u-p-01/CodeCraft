@@ -1,12 +1,78 @@
 
 // --------------------------------------NavigationPreloadManager----------------------
+
+
 var hash = window.location.hash;
+window.addEventListener('load', function() {
+  hash = window.location.hash;
+  if(hash === '#home')
+  {      
+        window.location.hash = 'home';
+        document.getElementById('home').style.display = 'block';
+        document.getElementById('work').style.display = 'none';
+        document.getElementById('about').style.display = 'none';
+        document.getElementById('blog').style.display = 'none';
+        const elements = document.querySelectorAll('.back')
+        elements.forEach(element => {
+        element.classList.remove('notShow');
+        element.classList.add('Show-2');
+        
+      });
+      }
+  else if (hash === '#work')
+  {
+    console.log(hash);
+    document.getElementById('work').style.display = 'block';
+    window.location.hash = 'work';
+    document.getElementById('home').style.display = 'none';
+    document.getElementById('work').style.display = 'block';
+    document.getElementById('about').style.display = 'none';
+    document.getElementById('blog').style.display = 'none';
+    const elements = document.querySelectorAll('.back')
+    elements.forEach(element => {
+    element.classList.remove('Show-2');
+    element.classList.add('notShow');
+  });
+  }
+  else if (hash === '#about')
+  {
+    console.log(hash);
+    document.getElementById('about').style.display = 'block';
+    window.location.hash = 'about';
+    
+    document.getElementById('home').style.display = 'none';
+    document.getElementById('work').style.display = 'none';
+    document.getElementById('about').style.display = 'block';
+    document.getElementById('blog').style.display = 'none';
+    const elements = document.querySelectorAll('.back')
+    elements.forEach(element => {
+    element.classList.remove('Show-2');
+    element.classList.add('notShow');
+  });
+  }
+  else if (hash === '#blog')
+  {
+    console.log(hash);
+    document.getElementById('blog').style.display = 'block';
+    window.location.hash = 'blog';
+    document.getElementById('home').style.display = 'none';
+    document.getElementById('work').style.display = 'none';
+    document.getElementById('about').style.display = 'none';
+    document.getElementById('blog').style.display = 'block';
+    const elements = document.querySelectorAll('.back')
+    elements.forEach(element => {
+    element.classList.remove('Show-2');
+    
+    element.classList.add('notShow');
+  });
+  }
+  
+
+})
+
 console.log(hash);
 window.onhashchange = function() {
   hash = window.location.hash;
-  
-  // Code to handle hash change
- 
 if(hash === '#home')
 {      
       window.location.hash = 'home';
@@ -68,7 +134,9 @@ else if (hash === '#blog')
   element.classList.add('notShow');
 });
 }
-console.log('Hash changed:', location.hash);
+  
+  // Code to handle hash change
+  console.log('Hash changed:', location.hash);
 };
 
 
