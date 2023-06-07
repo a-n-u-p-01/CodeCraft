@@ -1,55 +1,73 @@
 
 // --------------------------------------NavigationPreloadManager----------------------
+var hash = window.location.hash;
+console.log(hash);
 
-
-document.addEventListener('DOMContentLoaded', function() {
-  const details = document.querySelector('.details');
-  const contents = document.querySelectorAll('.content');
-
-  // Retrieve the last clicked element from localStorage
-  const lastClickedElement = localStorage.getItem('lastClickedElement');
-
-  // Function to show the clicked element and hide others
-  function showElement(elementId) {
-    contents.forEach(content => {
-      if (content.id === elementId) {
-        content.style.display = 'block';
-      } else {
-        content.style.display = 'none';
-      }
+if(hash === '#home')
+{
+  document.getElementById('home').style.display = 'block';
+      document.getElementById('work').style.display = 'none';
+      document.getElementById('about').style.display = 'none';
+      document.getElementById('blog').style.display = 'none';
+      const elements = document.querySelectorAll('.back')
+      elements.forEach(element => {
+      element.classList.remove('notShow');
+      element.classList.add('Show-2');
+      element.style.opacity = 0.5;
     });
-  }
-
-  // Event listener for each nav element
-  details.addEventListener('click', function(event) {
-    event.preventDefault();
-    const target = event.target;
-    if (target.classList.contains('home-nav')) {
-      // Show the home content and remove the lastClickedElement from localStorage
-      showElement('home');
-      localStorage.removeItem('lastClickedElement');
-    } else if (target.classList.contains('work-nav')) {
-      // Show the work content and store the lastClickedElement in localStorage
-      showElement('work');
-      localStorage.setItem('lastClickedElement', 'work');
-    } else if (target.classList.contains('about-nav')) {
-      // Show the about content and store the lastClickedElement in localStorage
-      showElement('about');
-      localStorage.setItem('lastClickedElement', 'about');
-    } else if (target.classList.contains('blog-nav')) {
-      // Show the blog content and store the lastClickedElement in localStorage
-      showElement('blog');
-      localStorage.setItem('lastClickedElement', 'blog');
     }
-  });
-
-  // Show the last clicked element if it exists in localStorage, or show the home content by default
-  if (lastClickedElement) {
-    showElement(lastClickedElement);
-  } else {
-    showElement('home');
-  }
+else if (hash === '#work')
+{
+  console.log(hash);
+  document.getElementById('work').style.display = 'block';
+  window.location.hash = 'work';
+  window.location.hash = 'work';
+  document.getElementById('home').style.display = 'none';
+  document.getElementById('work').style.display = 'block';
+  document.getElementById('about').style.display = 'none';
+  document.getElementById('blog').style.display = 'none';
+  const elements = document.querySelectorAll('.back')
+  elements.forEach(element => {
+  element.classList.remove('Show-2');
+  element.classList.add('notShow');
 });
+}
+else if (hash === '#about')
+{
+  console.log(hash);
+  document.getElementById('about').style.display = 'block';
+  window.location.hash = 'about';
+  window.location.hash = 'about';
+  document.getElementById('home').style.display = 'none';
+  document.getElementById('work').style.display = 'none';
+  document.getElementById('about').style.display = 'block';
+  document.getElementById('blog').style.display = 'none';
+  const elements = document.querySelectorAll('.back')
+  elements.forEach(element => {
+  element.classList.remove('Show-2');
+  element.classList.add('notShow');
+});
+}
+else if (hash === '#blog')
+{
+  console.log(hash);
+  document.getElementById('blog').style.display = 'block';
+  window.location.hash = 'blog';
+  document.getElementById('home').style.display = 'none';
+  document.getElementById('work').style.display = 'none';
+  document.getElementById('about').style.display = 'none';
+  document.getElementById('blog').style.display = 'block';
+  const elements = document.querySelectorAll('.back')
+  elements.forEach(element => {
+  element.classList.remove('Show-2');
+  
+  element.classList.add('notShow');
+  element.style.opacity = 0.5;
+});
+}
+
+
+
 
 // -------------------------------------------------------------------------
 
@@ -57,12 +75,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // ---------------------- toggle  --------------------------
 
-
 let navElems = document.getElementsByClassName('details');
 Array.from(navElems).forEach(navElem => {
   navElem.addEventListener('click', (e) => {
     if(e.target.classList.contains('home-nav'))
     {
+      
       document.getElementById('home').style.display = 'block';
       document.getElementById('work').style.display = 'none';
       document.getElementById('about').style.display = 'none';
@@ -70,46 +88,50 @@ Array.from(navElems).forEach(navElem => {
       const elements = document.querySelectorAll('.back')
       elements.forEach(element => {
       element.classList.remove('notShow');
-      element.classList.add('show');
+      element.classList.add('Show-2');
     });
     }
   else if(e.target.classList.contains('work-nav'))
     {
+      window.location.hash = 'work';
       document.getElementById('home').style.display = 'none';
       document.getElementById('work').style.display = 'block';
       document.getElementById('about').style.display = 'none';
       document.getElementById('blog').style.display = 'none';
       const elements = document.querySelectorAll('.back')
       elements.forEach(element => {
-      element.classList.remove('show');
+      element.classList.remove('Show-2');
       element.classList.add('notShow');
     });
     }
    else if(e.target.classList.contains('about-nav'))
     {
+      window.location.hash = 'about';
       document.getElementById('home').style.display = 'none';
       document.getElementById('work').style.display = 'none';
       document.getElementById('about').style.display = 'block';
       document.getElementById('blog').style.display = 'none';
       const elements = document.querySelectorAll('.back')
       elements.forEach(element => {
-      element.classList.remove('show');
+      element.classList.remove('Show-2');
       element.classList.add('notShow');
     });
     }
    else if(e.target.classList.contains('blog-nav'))
     {
+      window.location.hash = 'block';
       document.getElementById('home').style.display = 'none';
       document.getElementById('work').style.display = 'none';
       document.getElementById('about').style.display = 'none';
       document.getElementById('blog').style.display = 'block';
       const elements = document.querySelectorAll('.back')
       elements.forEach(element => {
-      element.classList.remove('show');
+      element.classList.remove('Show-2');
       element.classList.add('notShow');
     });
     }
 
+    element.style.opacity = 0.5;
   });
 });
 
