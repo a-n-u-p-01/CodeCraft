@@ -74,7 +74,7 @@ color: white;
 position: fixed;
 right: 20rem;
 font-size: 20px;
-animation: move-contact 4.5s forwards ease-out;
+animation: move-contact 3s forwards ease-out;
 
 }
 @keyframes move-contact{
@@ -86,7 +86,7 @@ animation: move-contact 4.5s forwards ease-out;
     }
     89%{
         opacity: 0.5;
-        right: 30rem;
+        right: 15rem;
     }
     
     100%{
@@ -165,16 +165,20 @@ header {
 }
 
 .move-animation{
-    animation: move 2s ease-in-out forwards;
+    animation: move 2.5s ease-in-out forwards;
 }
 @keyframes move{
 0%{
     top: 150px;
     opacity: 0px;
 }
-50%{
-    top: 100px;
-    opacity: 0.5;
+70%{
+    top: 80px;
+    opacity: 1;
+}
+80%{
+    top: 80px;
+    opacity: 1;
 }
 100%{
    top: 10px;
@@ -215,16 +219,20 @@ header {
 
 }
 .text-reveal-A2{
-    animation: reveal 3s forwards ease-in-out;
+    animation: reveal 1.8s forwards ease-out;
 }
 @keyframes reveal {
     0%{
         width:0%;
     }
-    80%{
+    40%{
         width:0%;
     }
-    95%{
+
+    85%{
+        width:15%;
+    }
+    90%{
         width:15%;
     }
    
@@ -751,7 +759,7 @@ footer a{
     justify-content: center;
     position: relative;
     letter-spacing: 0.4ch;
-    animation: h-move 3s forwards ease;
+    animation: h-move 2s forwards ease-in;
 }
 
 
@@ -770,24 +778,26 @@ footer a{
 
 
 #h1-line{
-    width: 20rem;
+    width: 41%;
     height: 1.2px;
     background:#CD1818;
     position: absolute;
-    top: 19.95rem;
+    top: 49.55vh;
     left: 24.5rem; 
     z-index: 1;
     opacity: 0.5;
-    animation: line-move 3s forwards ease-out;
+    animation: line-move 3s forwards ease-in;
     box-shadow: rgba(0, 0, 0) 0px 3px 8px;
 }
 
 @keyframes line-move {
     0%{
-        width: 0rem;
+        width: 0%;
+        opacity: 0;
     }
     100%{
-       width: 35rem;
+        opacity: 1;
+       width: 41%;
     }
 }
 
@@ -830,18 +840,15 @@ footer a{
     position: relative;
 }
 .p-d-move{
-    animation: Pd-move 2s ease-in-out forwards;
+    animation: Pd-move 3s ease-out forwards;
 }
 
 @keyframes Pd-move {
     0%{
-        opacity: 0;
-        top: 5rem;
+        opacity: 0.5;
+        top: 7rem;
     }
-    50%{
-        opacity: 0;
-        top: 2.5rem;
-    }
+   
     100%{
         
          opacity: 1;
@@ -954,23 +961,327 @@ footer a{
 #about{
     width: 100%;
     height: 100vh;
-    
     align-items: center;
     justify-content: center;
-    background: rgb(255, 0, 0);
 }
+
+#about-div{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: fixed;
+}
+
+
+#about-div button{
+    
+    background: transparent;
+    display: flex;
+    justify-content: center;
+   margin: 10px;
+   width: 15%;
+   height: 5vh;
+   font-size: 25px;
+   border: none;
+   letter-spacing: 0.4ch;
+   cursor: pointer;
+   transition: color 0.5s ease-out;
+   color: white;
+   opacity: 0.8;
+   position: relative;
+}
+
+#about-div button:hover{
+    color: #CD1818;
+}
+
+
+/* ---------------------up------------------- */
+
+.b1-up-move{
+   animation: bup1 0.5s ease forwards;
+}
+ 
+@keyframes  bup1{
+    0%{
+        opacity: 0; 
+        top: 2rem;
+    }
+   
+    100%{
+      
+        top: 0rem;
+        opacity: 1; 
+    }
+}
+.b2-up-move{
+   animation: bup2 1s ease forwards;
+}
+ 
+@keyframes  bup2{
+    0%{
+        opacity: 0; 
+        
+    }
+    50%{
+        opacity: 0; 
+        top: 2rem;
+    }
+   
+    100%{
+      
+        top: 0rem;
+        opacity: 1; 
+    }
+}
+.b3-up-move{
+   animation: bup3 1.5s ease forwards;
+}
+ 
+@keyframes  bup3{
+    0%{
+        opacity: 0; 
+        top: 2rem;
+    }
+    66%{
+        opacity: 0; 
+        top: 2rem;
+    }
+   
+    100%{
+      
+        top: 0rem;
+        opacity: 1; 
+    }
+}
+
+
+.b4-up-move{
+   animation: bup4 2s ease forwards;
+}
+ 
+@keyframes  bup4{
+    0%{
+        opacity: 0; 
+        top: 2rem;
+    }
+    75%{
+        opacity: 0; 
+        top: 2rem;
+    }
+   
+    100%{
+      
+        top: 0rem;
+        opacity: 1; 
+    }
+}
+
+
+
+/* --------------------click--------------------------------- */
+.b1-A-move{
+   animation: b1 1.5s ease forwards;
+}
+ 
+@keyframes  b1{
+    0%{
+        opacity: 1; 
+        left: 0rem;
+    }
+    50%{
+        opacity: 1; 
+        left: 0rem;
+    }
+    100%{
+      
+        left: -5rem;
+        opacity: 0; 
+    }
+}
+  
+.b2-A-move{
+   animation: b2 2s ease-out forwards;
+}
+ 
+@keyframes  b2{
+    0%{
+        opacity: 1; 
+    }
+    60%{
+        right: 0rem;
+        opacity: 1; 
+    }
+    100%{
+        right: -8rem;
+        opacity: 0; 
+    }
+}
+  
+.b3-A-move{
+    animation: b3 2.5s ease forwards;
+ }
+  
+ @keyframes  b3{
+     0%{
+         opacity: 1; 
+         left: 0rem;
+     }
+     60%{
+         opacity: 1; 
+         left: 0rem;
+     }
+     100%{
+       
+         left: -7rem;
+         opacity: 0; 
+     }
+ }
+  
+.b4-A-move{
+    animation: b4 3s ease forwards;
+ }
+  
+ @keyframes  b4{
+     0%{
+         opacity: 1; 
+         left: 0rem;
+     }
+     70%{
+         opacity: 1; 
+         left: 0rem;
+     }
+     100%{
+       
+         left: -5rem;
+         opacity: 0; 
+     }
+ }
+
+ 
+/* ----------------------------------------- */
+#skill{
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#resume{
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+#tech{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+#git-hub{
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#resume h1{
+    border: none;
+    display: flex;
+    font-size: 30px;
+    color:#CD1818;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.4ch;
+}
+
+#tech h1{
+    border: none;
+    color:#CD1818;
+    display: flex;
+    font-size: 30px;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.4ch;
+}
+#skill h1{
+    border: none;
+    color:#CD1818;
+    display: flex;
+    font-size: 30px;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.4ch;
+}
+#git-hub h1{
+    border: none;
+    color:#CD1818;
+    display: flex;
+    font-size: 30px;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.4ch;
+}
+
+
+
+
+
 /* -------------------------------------------------------blog page------------------------------------------ */
 
 #blog{
     width: 100%;
     height: 100vh;
-    
     align-items: center;
     justify-content: center;
-    background: rgb(3, 255, 41);
+   
+}
+#blogs-div{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#blogs-div h1{
+    width: 20%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    white-space: nowrap;
+    letter-spacing: 00.5ch;
+    color: white;
 }
 
 
+
+
+/* ---------------------------------------------------------------------------------------------------------- */
 
 
 

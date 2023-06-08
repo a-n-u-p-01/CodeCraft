@@ -70,6 +70,10 @@ window.addEventListener('load', function() {
 console.log(hash);
 window.onhashchange = function() {
   hash = window.location.hash;
+  document.getElementById('resume').style.display = 'none';
+    document.getElementById('skill').style.display = 'none';
+    document.getElementById('tech').style.display = 'none';
+    document.getElementById('git-hub').style.display = 'none';
 if(hash === '#home')
 {      
       window.location.hash = 'home';
@@ -149,7 +153,11 @@ else if (hash === '#blog')
 let navElems = document.getElementsByClassName('details');
 Array.from(navElems).forEach(navElem => {
   navElem.addEventListener('click', (e) => {
-    
+    hash = window.location.hash;
+    if(hash === '#home')
+    {      
+          window.location.hash = 'home';
+    }
     if(e.target.classList.contains('home-nav'))
     {
       
@@ -199,6 +207,7 @@ document.getElementById('D4').style.bottom = '100px';
       elements.forEach(element => {
       element.classList.remove('Show-2');
       element.classList.add('notShow');
+      document.getElementById('about-div').style.display = 'flex';
     });
     }
    else if(e.target.classList.contains('blog-nav'))
@@ -454,8 +463,79 @@ document.addEventListener("animationend", (event) => {
 
 
 
+// ---------------------------------------About---------------------------------------------
+
+let buttons = document.querySelectorAll('#about-div button');
+buttons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    buttons[0].classList.add('b1-A-move');
+    buttons[1].classList.add('b2-A-move');
+    buttons[2].classList.add('b3-A-move');
+    buttons[3].classList.add('b4-A-move');
+    
+    setTimeout( ()=>{
 
 
+    if (index === 0) {
+      buttons[0].classList.remove('b1-A-move');
+    buttons[1].classList.remove('b2-A-move');
+    buttons[2].classList.remove('b3-A-move');
+    buttons[3].classList.remove('b4-A-move');
+      document.getElementById('resume').style.display = 'flex';
+      document.getElementById('skill').style.display = 'none';
+      document.getElementById('tech').style.display = 'none';
+      document.getElementById('git-hub').style.display = 'none';
+      document.getElementById('about-div').style.display = 'none';
+    } else if (index === 1) {
+      buttons[0].classList.remove('b1-A-move');
+      buttons[1].classList.remove('b2-A-move');
+      buttons[2].classList.remove('b3-A-move');
+      buttons[3].classList.remove('b4-A-move');
+      document.getElementById('resume').style.display = 'none';
+      document.getElementById('skill').style.display = 'flex';
+      document.getElementById('tech').style.display = 'none';
+      document.getElementById('git-hub').style.display = 'none';
+      document.getElementById('about-div').style.display = 'none';
+      // Handle index 1
+    } else if (index === 2) {
+      buttons[0].classList.remove('b1-A-move');
+      buttons[1].classList.remove('b2-A-move');
+      buttons[2].classList.remove('b3-A-move');
+      buttons[3].classList.remove('b4-A-move');
+      document.getElementById('resume').style.display = 'none';
+      document.getElementById('skill').style.display = 'none';
+      document.getElementById('tech').style.display = 'flex';
+      document.getElementById('git-hub').style.display = 'none';
+      document.getElementById('about-div').style.display = 'none';
+      // Handle index 2
+    } else if (index === 3) {
+      buttons[0].classList.remove('b1-A-move');
+      buttons[1].classList.remove('b2-A-move');
+      buttons[2].classList.remove('b3-A-move');
+      buttons[3].classList.remove('b4-A-move');
+      document.getElementById('resume').style.display = 'none';
+      document.getElementById('skill').style.display = 'none';
+      document.getElementById('tech').style.display = 'none';
+      document.getElementById('git-hub').style.display = 'flex';
+      document.getElementById('about-div').style.display = 'none';
+      // Handle index 3
+    }
+  }, 3000);
+  });
+});
+
+
+let goBacks = document.querySelectorAll('.about-back');
+
+goBacks.forEach(goBack=>{
+  goBack.addEventListener('click',()=>{
+    document.getElementById('resume').style.display = 'none';
+    document.getElementById('skill').style.display = 'none';
+    document.getElementById('tech').style.display = 'none';
+    document.getElementById('git-hub').style.display = 'none';
+    document.getElementById('about-div').style.display = 'flex';
+  })
+});
 
 
 
