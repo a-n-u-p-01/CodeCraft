@@ -753,12 +753,113 @@ footer a{
 
 
 #projects{
+ display: flex;
+ justify-content: center;
  position: relative;
  top: 50vh;
- 
- opacity: 0.5;
  height: 1100rem;
+ padding: 5rem 0;
 }
+
+.project-div{
+  
+
+  display: grid;
+  width: fit-content;
+  height: fit-content;
+  margin: 2rem 0;
+}
+
+.project{
+
+    background-color: white;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 1rem;
+    width: 15rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+.project-discription{
+    width: 15rem;
+    height: 19rem;
+   
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-discription img{
+    width: 100%;
+    height: 9rem;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+}
+
+.project-heading{
+    width: 100%;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 0.4ch;
+    height: fit-content;
+    margin: 1rem 0 0.5 0;
+    color: #CD1818;
+}
+.project-details{
+    width: 100%;
+    font-size: 18px;
+    letter-spacing: 0.3ch;
+    height: fit-content;
+   
+}
+
+.project-links{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #CD1818;
+}
+
+.git-project{
+    width: 1rem;
+    height: 1rem;
+    background-image: url(github-mark.png);
+    background-size: cover;
+    color: #CD1818;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
