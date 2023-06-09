@@ -1,4 +1,31 @@
 
+let height = window.innerHeight;
+console.log('Window height:',height)
+console.log('Document height:',  document.documentElement.scrollHeight);
+// var container = document.getElementById("projects");
+// var containerRect = container.getBoundingClientRect();
+// var containerHeight = containerRect.top;
+// console.log('Container top height:',containerHeight)
+
+// var child = document.getElementById("p-4");
+// var childRect = child.getBoundingClientRect();
+// var childHeight = childRect.height;
+// console.log('Child height:',childHeight)
+// var elementTopFromParentTop = child.offsetTop;
+// console.log('off:',elementTopFromParentTop);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ----------------------------------- load hash check-----------------------------
 var hash = window.location.hash;
@@ -455,10 +482,48 @@ document.addEventListener("animationend", (event) => {
 
 
 
-
-
-
-
+window.addEventListener('scroll', () => {
+  const scrollPosition = window.scrollY;
+ let projects = document.querySelectorAll('.project')
+  if (scrollPosition >= 0 && scrollPosition<=300){
+      projects[0].classList.add('p-d-move')
+      projects[1].classList.add('p-d-move')
+      projects[2].classList.add('p-d-move')
+      projects[3].classList.remove('p-d-move')
+      projects[4].classList.remove('p-d-move')
+      projects[5].classList.remove('p-d-move')
+      projects[6].classList.remove('p-d-move')
+      projects[7].classList.remove('p-d-move')
+      projects[8].classList.remove('p-d-move')
+      
+  }
+  else if(scrollPosition >= 300 && scrollPosition <= 600) {
+    projects[0].classList.remove('p-d-move')
+    projects[1].classList.remove('p-d-move')
+    projects[2].classList.remove('p-d-move')
+    projects[3].classList.add('p-d-move')
+    projects[4].classList.add('p-d-move')
+    projects[5].classList.add('p-d-move')
+    projects[6].classList.remove('p-d-move')
+    projects[7].classList.remove('p-d-move')
+    projects[8].classList.remove('p-d-move')
+  }
+  else if(scrollPosition >= 700){
+    projects[0].classList.remove('p-d-move')
+    projects[1].classList.remove('p-d-move')
+    projects[2].classList.remove('p-d-move')
+    projects[3].classList.remove('p-d-move')
+    projects[4].classList.remove('p-d-move')
+    projects[5].classList.remove('p-d-move')
+    projects[6].classList.add('p-d-move')
+    projects[7].classList.add('p-d-move')
+    projects[8].classList.add('p-d-move')
+  }
+  
+  
+  
+  
+  });
 
 
 
@@ -538,9 +603,45 @@ goBacks.forEach(goBack=>{
 });
 
 
+// -----------------------------------------SMALL-------------------------------------------------------
 
 
 
+
+let menuButtons = document.querySelectorAll('#nav-menu-page');
+menuButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+         document.getElementById('nav-menu-page').classList.add('move-menu-backward');
+         document.getElementById('nav-menu-page').classList.remove('move-menu-forward');
+         setTimeout(() => {
+          document.querySelector('body main').style.display = 'flex';
+         },100)
+  });
+
+});
+
+document.getElementById('menu-btn').addEventListener('click',()=>{
+  document.getElementById('nav-menu-page').classList.add('move-menu-forward');
+  document.getElementById('nav-menu-page').classList.remove('move-menu-backward');
+  setTimeout(() => {
+    document.querySelector('body main').style.display = 'none';
+   },1000)
+})
+
+window.addEventListener('load', function() {
+  // document.getElementById('nav-menu-page').classList.remove('move-menu-backward');
+  // document.getElementById('nav-menu-page').classList.remove('move-menu-forward');
+  document.querySelector('body main').style.display = 'flex';
+});
+
+
+function isSmallScreen() {
+  return window.matchMedia("(max-width: 768px)").matches;
+}
+if(isSmallScreen){
+  document.getElementById('nav-menu-page').classList.remove('move-menu-backward');
+  document.getElementById('nav-menu-page').classList.remove('move-menu-forward');
+}
 
 
 

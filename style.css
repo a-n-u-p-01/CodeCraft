@@ -1,3 +1,150 @@
+@media only screen and (max-width: 767px) {
+    /* CSS rules for mobile devices */
+
+html{
+    font-size: 10px;
+}
+
+
+#rightUp{
+    display: none;
+}
+#leftUp{
+    display: none;
+}
+
+#right{
+    display: none !important;
+    
+}
+#left{
+    display: none !important;
+}
+header{
+  height: 8rem !important;
+  
+  display: block;
+}
+
+#contact{
+    display: none; 
+}
+
+.details{
+    display: none !important;
+}
+
+#menu-btn{
+    height: 3rem;
+    width: 3rem;
+    background: transparent;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    animation: m-b-i 2s ease-in-out forwards;
+}
+@keyframes m-b-i {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+body main{
+    display: none;
+}
+
+#nav-menu-page {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background: #CD1818;;
+    z-index: 99999;
+    /* position: fixed ; */
+    display: flex !important;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    font-size: 2rem;
+    letter-spacing: 0.4ch;
+    color: white;
+    align-items: center;
+}
+#nav-menu-page a{
+    color: white !important;
+}
+
+.move-menu-forward{
+    animation: move-menu-forward 1.5s ease-in-out forwards;
+}
+.move-menu-backward
+{
+    animation: move-menu-backward 1s ease-in-out forwards;
+}
+
+@keyframes move-menu-forward {
+    0%{
+        width: 0;
+        height: 0;
+        border-bottom-right-radius: 100%;
+        
+    }
+    50%{
+        width: 100%;
+        height: 100vh;
+    }
+    100%{
+        width: 100%;
+        height: 100vh;
+        border-bottom-right-radius: 0;
+    }
+}
+@keyframes move-menu-backward {
+    100%{
+        width: 0;
+        height: 0;
+        border-bottom-right-radius: 100%;
+        
+    }
+    50%{
+        width: 100%;
+        height: 100vh;
+        
+    }
+    0%{
+        width: 100%;
+        height: 100vh;
+        border-bottom-right-radius: 0;
+        
+    }
+}
+.project-div{
+    grid-template-columns: 1fr 1fr !important;
+}
+
+
+  }
+  
+
+
+
+/* --------------------------------------------------------------------- */
+  
+
+
+
+#menu-btn{
+   
+    display: none;
+    
+}
+#nav-menu-page {
+    display: none;
+}
+
 
  *{
     padding: 0;
@@ -30,19 +177,19 @@ nav{
 }
 #main-logo{
     color: white;
-    font-size: 25px;
+    font-size: 1.56rem;
     letter-spacing: 0.6ch;
-    position: fixed;
     top: 2rem;
     width: fit-content;
     height: fit-content;
     left: 5.5rem;
+    animation: m-b-i 2s ease-in-out forwards;
 }
 
 
 #main-logo span:nth-child(6){
     width: 11rem;
-    font-size: 15px;
+    font-size: 0.99rem;
     display: inline-block;
     letter-spacing: 0.3ch; 
     position: fixed;
@@ -57,7 +204,7 @@ nav{
 opacity: 0.8;
 display: flex;
 justify-content: space-around;
-font-size: 20px;
+font-size: 1.25rem;
 width: 30rem;
 font-family: 'VT323', monospace;
 position: fixed;
@@ -73,7 +220,7 @@ color: white;
 color: white;
 position: fixed;
 right: 20rem;
-font-size: 20px;
+font-size: 1.25rem;
 animation: move-contact 3s forwards ease-out;
 
 }
@@ -169,7 +316,7 @@ header {
 }
 @keyframes move{
 0%{
-    top: 150px;
+    top: 9.37rem;
     opacity: 0px;
 }
 70%{
@@ -177,11 +324,11 @@ header {
     opacity: 1;
 }
 80%{
-    top: 80px;
+    top: 5rem;
     opacity: 1;
 }
 100%{
-   top: 10px;
+   top: 0.625rem;
    opacity: 1;
 }
 
@@ -196,11 +343,11 @@ header {
     color: #CD1818;
 }
 #a div div:nth-child(2){
-    font-size: 75px;
+    font-size: 5rem;
 }
 #a div div:nth-child(3){
     letter-spacing: 0.2ch;
-    font-size: 30px;
+    font-size: 1.85rem;
     display: flex;
     color: #CD1818;
 }
@@ -260,7 +407,7 @@ header {
 #A3-h{
     width: 0ch;
     letter-spacing: 0.2ch;
-    font-size: 30px;
+    font-size: 1.85rem;
     overflow: hidden;
     white-space: nowrap;
 }
@@ -310,7 +457,7 @@ header {
     height: 100vh;
     z-index: 1;
     color: white;
-    font-size: 100px;
+    font-size: 6.25rem;
 }
 #c{
     position: relative;
@@ -361,7 +508,7 @@ header {
 #E1{
     height: fit-content;
     width: fit-content;
-    font-size: 25px;
+    font-size: 1.56rem;
     letter-spacing: 0.3ch;
     position: relative;
 }
@@ -383,7 +530,7 @@ header {
     letter-spacing: 0.3ch;
     height: fit-content;
     width: fit-content;
-    font-size: 55px;
+    font-size: 3.4rem;
     white-space: nowrap;
     margin: 3rem 0rem 1rem 0rem ;
     position: relative;
@@ -410,7 +557,7 @@ header {
 #E2 span{
     color: #CD1818;
     display: inline-flex;
-    font-size: 55px;
+    font-size: 3.43rem;
     white-space: nowrap;
     overflow: hidden;
     display: none;
@@ -418,7 +565,7 @@ header {
 
 #typed-text{
     
-    font-size: 55px;
+    font-size: 3.43rem;
     white-space: nowrap;
     overflow: hidden;
 }
@@ -463,7 +610,7 @@ header {
     letter-spacing: 0.3ch;
     height: fit-content;
     width: 55rem;
-    font-size: 30px;
+    font-size: 1.8rem;
     display: flex;
     justify-content: center;
     align-items: center;  
@@ -502,9 +649,9 @@ header {
 
 }
 #E4 button{
-    font-size: 20px;
+    font-size: 1.2rem;
     outline: none;
-    margin-top: 3rem;
+    margin-top: 3.5rem;
     cursor: pointer;
     padding: 1rem;
     letter-spacing: 0.3ch;
@@ -516,7 +663,7 @@ header {
     color: #0c9ea1;
     background-color:#CD1818;
     
-    border: 1px solid #CD1818;
+    border: 0.06rem solid #CD1818;
 }
 .EB1-move{
     animation: eb1-move 3s forwards;
@@ -558,7 +705,7 @@ header {
     color: #CD1818;
     background-color: transparent;
     
-    border: 1px solid #CD1818;
+    border: 0.06rem solid #CD1818;
 }
 
 
@@ -604,7 +751,7 @@ footer a{
    
 }
 .back div{
-    font-size: 40px;
+    font-size: 2.5rem;
     color: aliceblue;
     opacity: 0;
     /* background: black; */
@@ -615,26 +762,26 @@ footer a{
 
 #D1{
     position: fixed;
-    top: 390px;
-    left: 160px;
+    top: 24.3rem;
+    left: 16rem;
     color: white;
 }
 #D2{
     position: fixed;
-    left: 430px;
-    bottom: 270px;
+    left: 26.8rem;
+    bottom: 16.875rem;
     color: white;
 }
 #D3{
     position: fixed;
-    right: 340px;
-    top: 390px;
+    right: 21.2rem;
+    top: 24.37rem;
     color: white;
 }
 #D4{
     position: fixed;
-    bottom: 100px;
-    right: 60px;
+    bottom: 6.25rem;
+    right: 3.75rem;
     color: white;
 }
 
@@ -671,7 +818,7 @@ footer a{
 
 #bg1{
     
-    font-size: 200px; 
+    font-size: 12.5rem; 
     width: 100%;
     height: 100vh;
     color: rgb(255, 255, 255);
@@ -700,7 +847,7 @@ footer a{
 
 #bg2 span:nth-child(2){
 
-    font-size: 300px;
+    font-size: 18.75rem;
     width: fit-content;
     height: fit-content;
     position: fixed;
@@ -712,7 +859,7 @@ footer a{
     
     width: 100%;
     height: 100vh;
-    font-size: 130px;
+    font-size: 8.12rem;
     color: rgb(255, 255, 255);
     position: fixed;
     top: 12rem;
@@ -747,7 +894,7 @@ footer a{
 }
 
 #work h1{
-    font-size: 50px;
+    font-size: 3.15rem;
     background: transparent ;
     color: #CD1818;
     z-index: 1;
@@ -760,6 +907,7 @@ footer a{
     position: relative;
     letter-spacing: 0.4ch;
     animation: h-move 2s forwards ease-in;
+    position: relative;
 }
 
 
@@ -779,11 +927,10 @@ footer a{
 
 #h1-line{
     width: 41%;
-    height: 1.2px;
+    height: 0.06rem;
     background:#CD1818;
     position: absolute;
-    top: 49.55vh;
-    left: 24.5rem; 
+    top: 50%;
     z-index: 1;
     opacity: 0.5;
     animation: line-move 3s forwards ease-in;
@@ -840,18 +987,19 @@ footer a{
     position: relative;
 }
 .p-d-move{
-    animation: Pd-move 3s ease-out forwards;
+    animation: Pd-move 1s ease-in forwards;
 }
 
 @keyframes Pd-move {
     0%{
-        opacity: 0.5;
+        /* opacity: 0.5; */
         top: 7rem;
+       
     }
    
     100%{
         
-         opacity: 1;
+         /* opacity: 1; */
          top: 0rem;
     }
     
@@ -875,12 +1023,12 @@ footer a{
     height: 9rem;
     overflow: hidden;
     margin-bottom: 0.5rem;
-    border-radius: 5px;
+    border-radius: 0.3rem;
 }
 
 .project-heading{
     width: 100%;
-    font-size: 25px;
+    font-size: 1.56rem;
     font-weight: 500;
     letter-spacing: 0.4ch;
     height: fit-content;
@@ -890,7 +1038,7 @@ footer a{
 .project-details{
     color: white;
     width: 100%;
-    font-size: 19px;
+    font-size: 1.18rem;
     
     letter-spacing: 0.3ch;
     height: fit-content;
@@ -915,7 +1063,7 @@ footer a{
 
 
 .live-demo{
-    font-size: 18px;
+    font-size: 1.15rem;
     color: #CD1818;
     letter-spacing: 0.3ch;
 
@@ -982,10 +1130,10 @@ footer a{
     background: transparent;
     display: flex;
     justify-content: center;
-   margin: 10px;
+   margin: 0.6rem;
    width: 15%;
    height: 5vh;
-   font-size: 25px;
+   font-size: 1.56rem;
    border: none;
    letter-spacing: 0.4ch;
    cursor: pointer;
@@ -1203,7 +1351,7 @@ footer a{
 #resume h1{
     border: none;
     display: flex;
-    font-size: 30px;
+    font-size: 1.87rem;
     color:#CD1818;
     width: fit-content;
     height: fit-content;
@@ -1216,7 +1364,7 @@ footer a{
     border: none;
     color:#CD1818;
     display: flex;
-    font-size: 30px;
+    font-size: 1.87rem;
     width: fit-content;
     height: fit-content;
     align-items: center;
@@ -1238,7 +1386,7 @@ footer a{
     border: none;
     color:#CD1818;
     display: flex;
-    font-size: 30px;
+    font-size: 1.87rem;
     width: fit-content;
     height: fit-content;
     align-items: center;
@@ -1349,7 +1497,7 @@ footer a{
 #stick {
     
     height: 5rem ;
-    width: 2px ;
+    width: 0.12rem ;
     background: rgb(255, 255, 255) ;
     opacity: 0.5;
     animation: r-stick 3s forwards;
@@ -1383,7 +1531,7 @@ footer a{
 
 #stick-right {
     height: 0rem;
-    width: 2px ;
+    width: 0.12rem ;
     background: whitesmoke;
     animation: l-stick 3s forwards;
 }
@@ -1443,7 +1591,7 @@ footer a{
     opacity: 0.5;
     width: 5rem;
     height: 16vh;
-    font-size: 100px;
+    font-size: 6.25rem;
     z-index: 7;
     position: fixed;
     top: -0.6rem;
@@ -1454,7 +1602,7 @@ footer a{
 
 #rightUp{
     opacity: 0.5;
-    font-size: 100px;
+    font-size: 06.25rem;
     width: 5rem;
     height: 16vh;
     z-index: 7;
