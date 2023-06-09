@@ -611,18 +611,23 @@ goBacks.forEach(goBack=>{
 let menuButtons = document.querySelectorAll('#nav-menu-page');
 menuButtons.forEach((button) => {
   button.addEventListener('click', () => {
-         document.getElementById('nav-menu-page').classList.add('move-menu-backward');
-         document.getElementById('nav-menu-page').classList.remove('move-menu-forward');
-         setTimeout(() => {
-          document.querySelector('body main').style.display = 'flex';
-         },100)
+         
+          
+    document.getElementById('nav-menu-page').classList.add('move-menu-backward');
+    document.getElementById('nav-menu-page').classList.remove('move-menu-forward');
+    setTimeout(() => {
+      document.querySelector('body main').style.display = 'flex';
+      document.querySelector('body main').style.background= 'transparent';
+    },1000)
   });
-
+  
 });
 
 document.getElementById('menu-btn').addEventListener('click',()=>{
+  
   document.getElementById('nav-menu-page').classList.add('move-menu-forward');
   document.getElementById('nav-menu-page').classList.remove('move-menu-backward');
+  
   setTimeout(() => {
     document.querySelector('body main').style.display = 'none';
    },1000)

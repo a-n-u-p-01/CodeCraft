@@ -63,7 +63,7 @@ body main{
     overflow: hidden;
     background: #CD1818;;
     z-index: 99999;
-    /* position: fixed ; */
+    position: fixed ;
     display: flex !important;
     justify-content: center;
     flex-direction: column;
