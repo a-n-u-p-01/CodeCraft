@@ -3078,9 +3078,10 @@ footer a{
     background-color: #0c9ea1;
     display: flex;
     justify-content: center;
-
-}
-#right{
+     opacity: 0.2;
+    }
+    #right{
+    opacity: 0.2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3096,7 +3097,7 @@ footer a{
 }
 
 #leftUp{
-    opacity: 0.5;
+    opacity: 0;
     width: 5rem;
     height: 16vh;
     font-size: 6.25rem;
@@ -3109,7 +3110,7 @@ footer a{
 }
 
 #rightUp{
-    opacity: 0.5;
+    opacity: 0;
     font-size: 06.25rem;
     width: 5rem;
     height: 16vh;
