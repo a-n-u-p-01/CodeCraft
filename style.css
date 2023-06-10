@@ -1,5 +1,163 @@
+@media only screen and (max-width: 576px) {
+
+    #work h1{
+       top: 16vh !important;
+    }
+    #projects{
+        top: 12vh !important;
+    }
+
+    .project-div{
+        grid-template-columns: 1fr !important;
+    }
+
+.project{
+    align-items: center!important;
+    width: 25rem !important;
+    height: 35rem !important;
+}
+.project-discription{
+    width: 20rem !important;
+    height: 20rem !important;
+}
+
+
+.project-discription img {
+    
+    height: 16rem !important;
+    
+  }
+  .icon {
+
+    top: 69rem !important;
+    left: 2.5rem !important;
+  }
+
+
+  .icon a {
+  
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+   
+  }
+
+  .project-links {
+    width: 84% !important;
+  }
+
+  #about-div button {
+    
+    align-items: center !important;
+    width: 19% !important;
+    height: 10vh !important;  ;
+    font-size: 2.56rem !important;
+   
+  }
+  #tech h1 {
+
+    font-size: 4.87rem !important;
+    
+  }
+  #resume h1 {
+
+    font-size: 4.87rem !important;
+    
+  }
+  #git-hub h1 {
+
+    font-size: 4.87rem !important;
+    
+  }
+  #skill h1 {
+
+    font-size: 4.87rem !important;
+    
+  }
+
+  #E1 {
+   
+    font-size: 2.56rem !important;
+   
+  }
+
+
+
+  #E3 {
+   
+    font-size: 2.4rem !important;
+   
+  }
+
+
+
+
+  #E2 {
+    font-size: 6.4rem !important;
+  }
+
+
+
+  #E4 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center !important;
+    gap: 1rem;
+    margin-top: 5rem!important;
+  }
+
+  #main-logo span:nth-child(6) {
+    
+    font-size: 1.5rem !important;
+    width: 12rem !important;
+    white-space: nowrap !important;
+  }
+
+
+  #main-logo {
+    font-size: 2.56rem !important;
+    letter-spacing: 0.6ch;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------- */
+
 @media only screen and (max-width: 1024px) {
-    /* CSS rules for mobile devices */
+    
 
 html{
     font-size: 10px;
@@ -120,9 +278,6 @@ body main{
         border-bottom-right-radius: 0;
         
     }
-}
-.project-div{
-    grid-template-columns: 1fr 1fr !important;
 }
 
 
@@ -494,7 +649,7 @@ header {
     align-items: center;
     position: absolute;
     top: 12rem;
-    
+    flex-wrap: wrap;
 }
 
 
@@ -527,14 +682,17 @@ header {
     font-size: 3.4rem;
     
     margin: 3rem 0rem 1rem 0rem ;
-    position: relative;
-    overflow: hidden;
-    
-   display: inline-block;
+   
+   overflow: hidden;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction:column;
+   justify-content: center;
+   align-items: center;
 }
 .E2-move{
     animation: e2-move 1.5s  forwards;
-}
+} 
 @keyframes e2-move {
     0%{
         opacity: 0;
@@ -552,22 +710,23 @@ header {
     color: #CD1818;
     display: inline-flex;
     font-size: 3.43rem;
-    white-space: nowrap;
     overflow: hidden;
     display: none;
 }
 
 #typed-text{
     
+    
     font-size: 3.43rem;
-    white-space: nowrap;
+    
     overflow: hidden;
 }
 
 
 .type1 {
+    
     display: inline-flex !important;
-    animation: typing 5s steps(8) forwards ;
+    animation: typing 5s steps(10) forwards ;
   }
   
   @keyframes typing{
@@ -576,10 +735,10 @@ header {
     }
 
     40%{
-         width: 10ch;
+         width: 12ch;
     }
     80%{
-         width: 10ch;
+         width: 12ch;
     }
    100% {
           width: 0ch;
@@ -960,7 +1119,7 @@ footer a{
 
 .project-div{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
   width: fit-content;
   height: fit-content;
@@ -1120,7 +1279,7 @@ footer a{
 
 
 #about-div button{
-    
+    white-space: nowrap;
     background: transparent;
     display: flex;
     justify-content: center;
@@ -1764,7 +1923,7 @@ main{
 header {
     z-index: 5;
     width: 100%;
-    height: 6rem;
+    height: 5rem;
     background: #CD1818;
     display: flex;
     justify-content: center;
@@ -2044,7 +2203,9 @@ body{
     position: relative;
     overflow: hidden;
     white-space: nowrap;
-   display: inline-block;
+   display: flex;
+   align-items: center;
+   gap: 1ch;
 }
 .E2-move{
     animation: e2-move 1.5s  forwards;
@@ -2634,7 +2795,7 @@ footer a{
 
 
 #about-div button{
-    
+    white-space: nowrap;
     background: transparent;
     display: flex;
     justify-content: center;
@@ -3069,7 +3230,7 @@ footer a{
 
 #left{
    
-    width: 5rem;
+    width: 4rem;
     height: 100vh;
     z-index: -1;
     position: fixed;
@@ -3085,7 +3246,7 @@ footer a{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 5rem;
+    width: 4rem;
     height: 100vh;
     z-index: -1;
     position: fixed;

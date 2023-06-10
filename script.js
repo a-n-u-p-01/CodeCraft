@@ -618,7 +618,7 @@ menuButtons.forEach((button) => {
     setTimeout(() => {
       document.querySelector('body main').style.display = 'flex';
       document.querySelector('body main').style.background= 'transparent';
-    },1000)
+    },100)
   });
   
 });
