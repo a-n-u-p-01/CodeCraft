@@ -29,8 +29,8 @@
   }
   .icon {
 
-    top: 69rem !important;
-    left: 2.5rem !important;
+    top: 58rem !important;
+    right: -30rem !important;
   }
 
 
@@ -328,11 +328,16 @@ nav{
     width: fit-content;
     height: fit-content;
     left: 5.5rem;
-    animation: m-b-i 2s ease-in-out forwards;
+}
+
+#main-logo span:nth-child(2),span:nth-child(4),span:nth-child(5){
+    animation: m-b-i 5s ease-in-out forwards;
+    
 }
 
 
 #main-logo span:nth-child(6){
+    animation: m-b-i 5s ease-in-out forwards;
     width: 11rem;
     font-size: 0.99rem;
     display: inline-block;
