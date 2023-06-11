@@ -382,7 +382,9 @@ child4.style.bottom = `${divTopOffset4 - ((scrollPosition-240)*0.6)}px`;
 // ---------------------------------------------------------------------
 
 
-if(scrollPosition >= 2200){
+
+
+if(scrollPosition >= 2010){
   document.querySelector('.foot').classList.add('f-Show');
   document.querySelector('.foot').classList.remove('f-notShow');
   document.getElementById('E1').classList.add('E1-move');
